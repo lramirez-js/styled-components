@@ -6,10 +6,24 @@ const App = () => {
     color: red;
   `
 
+  const Content = styled.div`
+    padding: 20px 25px;
+  `
+
+  const Button = styled.button`
+    background-color: ${props => props.primary ? 'red' : 'white'};
+    color: ${props => props.primary ? 'wite': 'red'};
+    padding: 10px 15px;
+    border: solid 2px red;
+    border-radius: 4px;
+  `
+
   return(
-    <div>
+    <Content>
       <P>Hi there!</P>
-    </div>
+      <Button>Send</Button>
+      <Button primary>Send</Button>
+    </Content>
   )
 }
 
