@@ -27,7 +27,7 @@ const App = () => {
       <P>Hi there!</P>
       <Button>Send</Button>
       <Button primary>Send</Button>
-      <BlockButton>Send</BlockButton>
+      <BlockButton primary as="a" href="#">Send</BlockButton>
     </Content>
   )
 }
