@@ -49,14 +49,19 @@ const Input = styled.input.attrs(props => ({
 }))`
   font-size: 20px;
   border: 1px solid red;
+  color: ${props => props.color}
 `
+
+const Password = styled(Input).attrs({
+  type: 'password'
+})``
 
 const App = () => {
   return(
     <Content>
       <P>Hi there!</P>
       <Button>Send</Button>
-      <Button>Send <p className="info'>My Info</p> </Button>
+      <Button>Send <p className="info">My Info</p> </Button>
       <Button primary>Send</Button>
       <Button primary className="secondary">Send</Button>
       <BlockButton primary as="a" href="#">Send</BlockButton>
@@ -64,6 +69,7 @@ const App = () => {
       <Link>My Link</Link>
       <StyledLink>My Link</StyledLink>
       <Input />
+      <Password />
     </Content>
   )
 }
