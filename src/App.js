@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 
 const P = styled.p`
     font-size: 24px;
@@ -56,6 +56,21 @@ const Password = styled(Input).attrs({
   type: 'password'
 })``
 
+const roll = keyframes`
+  from {
+    transform: rotate(0deg)
+  }
+
+  to {
+    transform: rotate(360deg)
+  }
+`
+
+const Rotate = styled.div`
+  display: inline-block;
+  animation : ${roll} 2s linear infinite;
+`
+
 const App = () => {
   return(
     <Content>
@@ -70,6 +85,8 @@ const App = () => {
       <StyledLink>My Link</StyledLink>
       <Input />
       <Password />
+      <br />
+      <Rotate>Rotating</Rotate>
     </Content>
   )
 }
